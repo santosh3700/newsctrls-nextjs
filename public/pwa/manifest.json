@@ -1,6 +1,6 @@
 {
-	"name": "BabaCric",
-	"short_name": "BabaCric",
+	"name": "News Control",
+	"short_name": "NewsCtrls",
 	"icons": [
 		{
 			"src": "windows11/SmallTile.scale-100.png",
