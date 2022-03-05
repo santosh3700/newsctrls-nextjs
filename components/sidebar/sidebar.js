@@ -17,7 +17,7 @@ import Link from 'next/link';
 import PrimeMembeershipCard from "./prime-membership-card";
 
 function Sidebar({ posts }) {
-    console.log(posts)
+    //console.log(posts)
     return (
         <div className="sidebarContainer">
             <Heading size="md" textAlign="center" mt="5" p="2" bgColor="#08ffc5" color="blackAlpha.800">Recent Post</Heading>

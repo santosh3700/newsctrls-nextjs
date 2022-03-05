@@ -17,7 +17,7 @@ import { getAllPostsWithSlug, getCateogryRecentPostbyName, getHeaderMenuByName, 
 
 function OtherPages(props) {
 
-    console.log("original data = ", props)
+    //console.log("original data = ", props)
 
     const router = useRouter()
 
@@ -132,13 +132,13 @@ export async function getStaticPaths() {
 
     const allPosts = await getAllPostsWithUri()
 
-    const mostVisitedUri = ['/fantasy-cricket/dream11-investment-strategy-5-years-of-experience/']
+    //const mostVisitedUri = ['/fantasy-cricket/dream11-investment-strategy-5-years-of-experience/']
 
     const categoryListUri = ['/category/ipl', '/category/fantasy-cricket', '/category/cricket', '/category/birthday', '/category/fantasy-platform']
 
     const postListUri = allPosts.edges.map(({ node }) => `${node.uri}`)
 
-    const allUri = [...mostVisitedUri, ...categoryListUri, ...postListUri]
+    const allUri = [...categoryListUri, ...postListUri]
 
 
     return {
