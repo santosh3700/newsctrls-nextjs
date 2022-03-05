@@ -48,6 +48,9 @@ const MyApp = ({ Component, pageProps }) => {
 
       <Script src='https://cdn.onesignal.com/sdks/OneSignalSDK.js' strategy="afterInteractive" />
 
+      <Script strategy="afterInteractive" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7076157039576041"
+        crossorigin="anonymous" />
+
       <GoogleAnalytics />
 
       <ChakraProvider>
