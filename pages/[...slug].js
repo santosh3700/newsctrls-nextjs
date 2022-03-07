@@ -90,7 +90,16 @@ export async function getStaticProps(context) {
     let pageType;
 
     if (urlType === 'category' || urlType === 'tag' || urlType === 'author') {
-        data = await getCateogryRecentPostbyName(slug[1])
+
+        let typeName
+        if (urlType === 'tag') {
+            typeName = urlType
+        }
+        else {
+            typeName = urlType + 'Name'
+        }
+
+        data = await getCateogryRecentPostbyName(typeName, slug[1])
 
         pageType = "archive"
     }
@@ -122,7 +131,7 @@ export async function getStaticProps(context) {
             pageType: pageType,
             slug: slug,
         },
-        revalidate: 15 //10 minutes
+        revalidate: 30 //30 minutes
     }
 }
 
