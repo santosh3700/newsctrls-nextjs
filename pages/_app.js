@@ -19,8 +19,13 @@ const MyApp = ({ Component, pageProps }) => {
       OneSignal.init({
         appId: "d56b37f6-aabe-4162-af9b-f84619ecda46",
         safari_web_id: "web.onesignal.auto.3db514d6-c75f-4a27-ad99-adae19a9a814",
-        notifyButton: {
-          enable: true,
+        promptOptions: {
+          slidedown: {
+            enabled: true,
+            autoPrompt: true,
+            timeDelay: 20,
+            pageViews: 1,
+          }
         },
       });
     });
