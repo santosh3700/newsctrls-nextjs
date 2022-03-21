@@ -1,16 +1,18 @@
-import Alert from '../components/alert'
-import Footer from '../components/footer'
-import Meta from '../components/meta'
+import Head from 'next/head'
+import Headroom from 'react-headroom'
+import React from 'react'
+import Footer from './Menu/Footer'
+import Navbar from './Menu/Navbar'
 
-export default function Layout({ preview, children }) {
-  return (
-    <>
-      <Meta />
-      <div className="min-h-screen">
-        <Alert preview={preview} />
-        <main>{children}</main>
-      </div>
-      <Footer />
-    </>
-  )
+export default function Layout({ children }) {
+    return (
+        <>
+            <Head>News Controls</Head>
+            <Headroom>
+                <Navbar />
+            </Headroom>
+            <main>{children}</main>
+            <Footer />
+        </>
+    )
 }
