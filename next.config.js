@@ -7,7 +7,7 @@ module.exports = withPWA({
     text: {
       MORE: 'More',
       FOOTER_DESC:
-        'Quis autem vel eum iure reprehenderit qui in ea voluptatevelit esse quam nihil molestiae consequatur, vel illum quidolorem eum...',
+        'NewsCtrls.com provides latest news from all over the world. Get breaking news alerts in field of politics, bollywood, hollywood and other social news by subscribing us.',
     },
 
     home: {
