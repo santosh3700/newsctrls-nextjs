@@ -7,8 +7,8 @@ import {
   getCateogryRecentPostbyName,
 } from '../lib/api';
 import { useRouter } from 'next/router';
-import Header from '../components/layout/Header';
-import Footer from '../components/layout/Footer';
+import Header from '../components/layout/header';
+import Footer from '../components/layout/footer';
 import { VStack } from '@chakra-ui/react';
 import HeroSection from '../components/HeroSection';
 import Home from '../components/Home';
