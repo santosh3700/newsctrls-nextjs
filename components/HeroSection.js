@@ -93,7 +93,7 @@ const HeroSection = (props) => {
                 })}
               {post &&
                 post.slice(1, 2).map((item, key) => {
-                  console.log('checkitems=', item);
+                  // console.log('checkitems=', item);
                   return (
                     item &&
                     item.node && (
