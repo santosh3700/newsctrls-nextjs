@@ -55,11 +55,11 @@ const Arrow = styled.span`
 `;
 
 export const DesktopNav = ({ menuItems }) => {
-  console.log('checknavmenu=', menuItems);
+  // console.log('checknavmenu=', menuItems);
   const [activeMenus, setActiveMenus] = useState([]);
 
   const handleMenuClick = (data) => {
-    console.log(data);
+    // console.log(data);
   };
 
   const handleArrowClick = (menuName) => {
@@ -76,10 +76,10 @@ export const DesktopNav = ({ menuItems }) => {
 
     setActiveMenus(newActiveMenus);
   };
-  console.log('data', menuItems);
+  // console.log('data', menuItems);
 
   const ListMenu = ({ dept, data, hasSubMenu, menuName, menuIndex }) => {
-    console.log('checkmenuitem=', data);
+    // console.log('checkmenuitem=', data);
     return (
       <LI>
         <Popover trigger={'hover'} placement={'right-end'}>
@@ -122,7 +122,7 @@ export const DesktopNav = ({ menuItems }) => {
       <ULSub id="submenu">
         {data.map((menu, index) => {
           const menuName = `submenu-${dept}-${menuIndex}-${index}`;
-          console.log('greater', menu);
+          // console.log('greater', menu);
 
           return (
             <ListMenu
@@ -142,7 +142,7 @@ export const DesktopNav = ({ menuItems }) => {
   return (
     <HStack id="mainul" listStyleType=" none">
       {menuItems.map((menu, index) => {
-        console.log('aagya', menu);
+        // console.log('aagya', menu);
         const dept = 1;
         const menuName = `menu-${dept}-${index}`;
 

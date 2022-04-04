@@ -58,7 +58,7 @@ export default function Footer() {
                 <Link href="/">
                   <Image
                     objectFit="contain"
-                    src="https://akm-img-a-in.tosshub.com/aajtak/resource/img/bemisaal-20-saal/aajtak-logo-71X52.png"
+                    src={process.env.image.LOGO}
                     width="100% !important"
                     height="80px"
                   />
@@ -113,9 +113,7 @@ export default function Footer() {
             justify={{ md: 'space-between' }}
             align={{ md: 'center' }}
           >
-            <Text color={'white'}>
-              © 2022 Chakra Templates. All rights reserved
-            </Text>
+            <Text color={'white'}>© 2022 Nextwebguru. All rights reserved</Text>
           </Container>
         </Box>
       </Box>

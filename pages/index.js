@@ -29,7 +29,7 @@ export default function Index({
   // const categoryData = '';
 
   const router = useRouter();
-  console.log('chekcedgedata=', sideBarData);
+  // console.log('chekcedgedata=', sideBarData);
 
   return (
     <>
