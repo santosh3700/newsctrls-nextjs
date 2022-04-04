@@ -94,7 +94,7 @@ export const MobileNav = ({
 }) => {
   //   var data = 'oka';
 
-  console.log('checkMObilemenu=', menuItems);
+  // console.log('checkMObilemenu=', menuItems);
 
   return (
     <DrawerToggle.Provider value={onClosedrawer}>
@@ -128,10 +128,10 @@ const MobileMultiMenus = ({ menus, state, actions, libraries }) => {
   const [activeMenus, setActiveMenus] = useState([]);
 
   const toggleDrawer = useContext(DrawerToggle);
-  console.log('hellodatasss', toggleDrawer);
+  // console.log('hellodatasss', toggleDrawer);
 
   const handleMenuClick = (data) => {
-    console.log(data);
+    // console.log(data);
   };
 
   const handleArrowClick = (menuName) => {
