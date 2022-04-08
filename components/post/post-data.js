@@ -53,6 +53,16 @@ function PostData({ data }) {
                     }
                 </div>
 
+                {/* Google Ad */}
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-format="autorelaxed"
+                    data-ad-client="ca-pub-7076157039576041"
+                    data-ad-slot="3184082831"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({ });
+                </script>
+
             </Box>
         </>
     );
