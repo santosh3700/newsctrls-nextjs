@@ -26,12 +26,14 @@ function PostData({ data }) {
                 {/* Author detail */}
                 <Text fontSize="md" as="p" align="center">
                     By <b>{`${author.firstName} ${author.lastName}`}</b>
-                    on <b>{date.toDateString()}</b>
+                    {` `} on <b>{date.toDateString()}</b>
                 </Text>
 
                 {/* Featured Media */}
                 <Image priority src={imagePath} width={320} height={180} layout="responsive" alt={data.title} />
 
+
+                <ins className="adsbygoogle" style={{ display: 'block' }} data-ad-client="ca-pub-7076157039576041" data-ad-slot={3539306056} data-ad-format="auto" data-full-width-responsive="true" />
 
                 {/* Post Content */}
                 <div
