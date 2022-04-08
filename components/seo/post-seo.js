@@ -4,9 +4,13 @@ import Head from "next/head";
 function PostSeo({ data }) {
 
     const seo = data.seo
-    const imagePath = data.featuredImage.node.sourceUrl
-    const imageSize = data.featuredImage.node.mediaDetails
+    const imagePath = data.featuredImage?.node.sourceUrl
+    const imageSize = data.featuredImage?.node.mediaDetails
     const authorName = data.author.node.name
+
+    if (!imagePath) {
+        return "not found"
+    }
 
     return (
         <Head>

@@ -6,8 +6,12 @@ import ClassesPostBody from '../../styles/post-body.module.css'
 function PostData({ data }) {
     const author = data.author.node
     const date = new Date(data.date)
-    const imagePath = data.featuredImage.node.sourceUrl
+    const imagePath = data.featuredImage?.node.sourceUrl
     const tags = data.tags.edges
+
+    if (!imagePath) {
+        return "not found"
+    }
 
     return (
         <>
