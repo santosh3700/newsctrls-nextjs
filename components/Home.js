@@ -42,8 +42,10 @@ const Home = (props) => {
     <>
       {/* first grid box */}
       <HeroSection post={post} />
+      <ins className="adsbygoogle" style={{ display: 'block' }} data-ad-client="ca-pub-7076157039576041" data-ad-slot={3539306056} data-ad-format="auto" data-full-width-responsive="true" />
       {/* second grid box */}
       <CategoryA newsData={categoryAData} />
+      <ins className="adsbygoogle" style={{ display: 'block' }} data-ad-client="ca-pub-7076157039576041" data-ad-slot={3539306056} data-ad-format="auto" data-full-width-responsive="true" />
       {/* third grid box */}
       <Box mx="3%" py="3%">
         <Grid
@@ -59,10 +61,12 @@ const Home = (props) => {
           {/* first column */}
           <Box>
             <CategoryB newsData={categoryBData} />
+            <ins className="adsbygoogle" style={{ display: 'block' }} data-ad-client="ca-pub-7076157039576041" data-ad-slot={3539306056} data-ad-format="auto" data-full-width-responsive="true" />
 
             {/* fifth grid box */}
 
             <CategoryC newsData={categoryCData} />
+            <ins className="adsbygoogle" style={{ display: 'block' }} data-ad-client="ca-pub-7076157039576041" data-ad-slot={3539306056} data-ad-format="auto" data-full-width-responsive="true" />
 
             {/* fifth grid box end */}
             {/* add section */}
@@ -71,6 +75,7 @@ const Home = (props) => {
             </Box> */}
             {/* sixth grid box */}
             <CategoryD newsData={categoryDData} />
+            <ins className="adsbygoogle" style={{ display: 'block' }} data-ad-client="ca-pub-7076157039576041" data-ad-slot={3539306056} data-ad-format="auto" data-full-width-responsive="true" />
             {/* sixth grid box end*/}
           </Box>
           {/* third column as sidebar */}

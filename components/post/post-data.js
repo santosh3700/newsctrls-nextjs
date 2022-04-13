@@ -35,6 +35,7 @@ function PostData({ data }) {
 
                 <ins className="adsbygoogle" style={{ display: 'block' }} data-ad-client="ca-pub-7076157039576041" data-ad-slot={3539306056} data-ad-format="auto" data-full-width-responsive="true" />
 
+
                 {/* Post Content */}
                 <div
                     className={`${ClassesPostBody.content} contentBody`}
