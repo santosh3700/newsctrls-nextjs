@@ -5,9 +5,9 @@ import {
   PopoverContent,
   PopoverBody,
   HStack,
-  Link,
 } from '@chakra-ui/react';
 import styled from '@emotion/styled';
+import Link from 'next/link';
 
 const UL = styled.ul`
   list-style: none;

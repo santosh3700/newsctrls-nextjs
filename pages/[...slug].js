@@ -17,6 +17,7 @@ import {
   getPageDetailsByUri,
   getPostDetailsByUri,
   getAllPostsWithUri,
+  getAllPostsForHome,
 } from '../lib/api';
 
 //export const config = { amp: 'hybrid' }
@@ -39,6 +40,8 @@ function OtherPages(props) {
 
     const urlType = props.urlType;
     const pageType = props.pageType;
+
+    // console.log('checkpagetype', pageType);
 
     //if found any data
     if (props.data && props.data) {
@@ -69,7 +72,7 @@ function OtherPages(props) {
     <>
       <Header menu={props.menu} />
       <VStack>
-        <div className="mainBody">
+        <div>
           <main className="mainContent">{componentToShow}</main>
         </div>
       </VStack>
@@ -82,6 +85,11 @@ export async function getStaticProps(context) {
   const { params } = context;
   const { slug } = params;
   const urlType = slug[0];
+  const postList = await getAllPostsForHome();
+  const sideBarData = await getCateogryRecentPostbyName(
+    'categoryName',
+    process.env.home.categoryList.SIDEBAR.SIDEBAR_NAME
+  );
 
   //get data
   let data;
@@ -126,6 +134,8 @@ export async function getStaticProps(context) {
 
   return {
     props: {
+      sideBarData: sideBarData,
+      postList: postList,
       urlType: urlType,
       urlName: slug[0],
       data: data,
@@ -137,6 +147,10 @@ export async function getStaticProps(context) {
   };
 }
 
+// export async function getStaticProps({ preview = false }) {
+
+//   return { props: { postList: postList } };
+// }
 export async function getStaticPaths() {
   const allPosts = await getAllPostsWithUri();
 

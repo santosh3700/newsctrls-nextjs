@@ -65,7 +65,7 @@ const CategoryB = (props) => {
                       mb="2"
                       h="auto"
                       w="100%"
-                      src={item.node.featuredImage.node.sourceUrl}
+                      src={item.node.featuredImage?.node?.sourceUrl}
                       alt={item.node.title}
                     />
                   </Box>
@@ -120,7 +120,7 @@ const CategoryB = (props) => {
                           mb="2"
                           h="auto"
                           w="100%"
-                          src={item.node.featuredImage.node.sourceUrl}
+                          src={item.node.featuredImage?.node?.sourceUrl}
                           alt={item.node.title}
                         />
                         <Box>

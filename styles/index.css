@@ -148,7 +148,7 @@ a:hover {
 
 .desktopShareContainer {
 	position: sticky;
-	top: 0;
+	top: 60px;
 }
 
 .mobileShareContainer {

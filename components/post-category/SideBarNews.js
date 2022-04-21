@@ -27,7 +27,7 @@ const SideBarNews = (props) => {
 
   // console.log('newsdata', newsData.edges.length);
   return (
-    <Box paddingRight="3%">
+    <Box paddingRight="3%" className="desktopShareContainer">
       <Box display="flex" justifyContent="space-between">
         <Box>
           <Box display="flex" alignItems="baseline">
