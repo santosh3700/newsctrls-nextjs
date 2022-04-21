@@ -67,13 +67,15 @@ const HeroSection = (props) => {
                           >
                             {item.node.title}
                           </Heading>
-                          <Image
-                            mb="2"
-                            h="auto"
-                            w="100%"
-                            src={item.node.featuredImage.node.sourceUrl}
-                            alt={item.node.title}
-                          />
+                          {item.node.featuredImage && (
+                            <Image
+                              mb="2"
+                              h="auto"
+                              w="100%"
+                              src={item.node.featuredImage.node.sourceUrl}
+                              alt={item.node.title}
+                            />
+                          )}
                           <Text
                             textAlign="justify"
                             mb={2}
@@ -186,13 +188,15 @@ const HeroSection = (props) => {
                               }}
                               gap="4"
                             >
-                              <Image
-                                mb="2"
-                                h="auto"
-                                w="100%"
-                                src={item.node.featuredImage.node.sourceUrl}
-                                alt={item.node.title}
-                              />
+                              {item.node.featuredImage && (
+                                <Image
+                                  mb="2"
+                                  h="auto"
+                                  w="100%"
+                                  src={item.node.featuredImage.node.sourceUrl}
+                                  alt={item.node.title}
+                                />
+                              )}
                               <Box>
                                 <Heading
                                   textAlign="justify"

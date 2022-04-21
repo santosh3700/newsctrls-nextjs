@@ -8,7 +8,6 @@ import {
   Stack,
   Collapse,
   Icon,
-  Link,
   Popover,
   PopoverTrigger,
   PopoverContent,
@@ -38,6 +37,7 @@ import {
   ChevronRightIcon,
   PhoneIcon,
 } from '@chakra-ui/icons';
+import Link from 'next/link';
 
 import { FaBell, FaTram, FaTv, FaSearch } from 'react-icons/fa';
 

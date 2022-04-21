@@ -92,13 +92,15 @@ const CategoryD = (props) => {
                         }}
                         gap="4"
                       >
-                        <Image
-                          mb="2"
-                          h="auto"
-                          w="100%"
-                          src={item.node.featuredImage.node.sourceUrl}
-                          alt={item.node.title}
-                        />
+                        {item.node.featuredImage && (
+                          <Image
+                            mb="2"
+                            h="auto"
+                            w="100%"
+                            src={item.node.featuredImage.node.sourceUrl}
+                            alt={item.node.title}
+                          />
+                        )}
                         <Box>
                           <Heading
                             textAlign="justify"

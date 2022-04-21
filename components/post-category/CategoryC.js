@@ -141,14 +141,16 @@ const CategoryC = (props) => {
                         cursor="pointer"
                         // minHeight="250px"
                       >
-                        <Image
-                          border="1px solid #d1d1d1"
-                          mb="2"
-                          h="auto"
-                          w="100%"
-                          src={item.node.featuredImage.node.sourceUrl}
-                          alt={item.node.title}
-                        />
+                        {item.node.featuredImage?.node?.sourceUrl && (
+                          <Image
+                            border="1px solid #d1d1d1"
+                            mb="2"
+                            h="auto"
+                            w="100%"
+                            src={item.node.featuredImage?.node?.sourceUrl}
+                            alt={item.node.title}
+                          />
+                        )}
                         <Heading
                           mb={2}
                           color="white"

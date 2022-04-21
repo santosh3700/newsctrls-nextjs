@@ -74,14 +74,16 @@ const CategoryA = (props) => {
                       item.node && (
                         <Link href={item.node.uri}>
                           <Box key={key} mb={4} cursor="pointer">
-                            <Image
-                              border="1px solid #d1d1d1"
-                              mb="2"
-                              h="auto"
-                              w="100%"
-                              src={item.node.featuredImage.node.sourceUrl}
-                              alt={item.node.title}
-                            />
+                            {item.node.featuredImage && (
+                              <Image
+                                border="1px solid #d1d1d1"
+                                mb="2"
+                                h="auto"
+                                w="100%"
+                                src={item.node.featuredImage?.node?.sourceUrl}
+                                alt={item.node.title}
+                              />
+                            )}
                             <Heading
                               mb={2}
                               color="white"
@@ -126,7 +128,7 @@ const CategoryA = (props) => {
                               mb="2"
                               h="auto"
                               w="100%"
-                              src={item.node.featuredImage.node.sourceUrl}
+                              src={item.node.featuredImage?.node?.sourceUrl}
                               alt={item.node.title}
                             />
                             <Box>
@@ -195,7 +197,7 @@ const CategoryA = (props) => {
                           mb="2"
                           h="auto"
                           w="100%"
-                          src={item.node.featuredImage.node.sourceUrl}
+                          src={item.node.featuredImage?.node?.sourceUrl}
                           alt={item.node.title}
                         />
                         <Heading
