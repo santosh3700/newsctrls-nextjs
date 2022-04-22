@@ -1,9 +1,9 @@
 {
 	"private": true,
 	"scripts": {
-		"dev": "next",
+		"dev": "node server.js",
 		"build": "next build",
-		"start": "next start",
+		"start": "next start -H 0.0.0.0 -p ${PORT:-8080}",
 		"lint": "next lint"
 	},
 	"dependencies": {
@@ -12,7 +12,9 @@
 		"@emotion/react": "^11.8.1",
 		"@emotion/styled": "^11.8.1",
 		"classnames": "2.3.1",
+		"cross-env": "^7.0.3",
 		"date-fns": "2.28.0",
+		"express": "^4.17.3",
 		"framer-motion": "^6.2.8",
 		"next": "latest",
 		"next-pwa": "^5.4.5",
