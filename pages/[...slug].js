@@ -169,7 +169,7 @@ export async function getStaticPaths() {
   const allUri = [...categoryListUri, ...postListUri];
 
   return {
-    paths: [],
+    paths: allUri,
     fallback: true,
   };
 }
