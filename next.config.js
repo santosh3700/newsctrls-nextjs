@@ -2,7 +2,8 @@ const withPWA = require('next-pwa');
 
 module.exports = withPWA({
   env: {
-    wordpressApiUrl: 'https://newsctrls.com/graphql',
+    wordpressApiUrl: 'https://newsctrls.stellate.sh/graphql',
+    //  'https://newsctrls.com/graphql',
     headerMenuName: 'TieLabs Main Menu',
     text: {
       MORE: 'More',
@@ -51,6 +52,7 @@ module.exports = withPWA({
   images: {
     domains: [
       'newsctrls.com',
+      'newsctrls.stellate.sh',
       'i0.wp.com',
       'secure.gravatar.com',
       'babacricnews.s3.ap-south-1.amazonaws.com',
