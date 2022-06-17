@@ -1,59 +1,22 @@
-const withPWA = require('next-pwa');
-
-module.exports = withPWA({
-  env: {
-    wordpressApiUrl: 'https://newsctrls.com/graphql',
-    headerMenuName: 'TieLabs Main Menu',
-    text: {
-      MORE: 'More',
-      FOOTER_DESC:
-        'NewsCtrls.com provides latest news from all over the world. Get breaking news alerts in field of politics, bollywood, hollywood and other social news by subscribing us.',
-    },
-
-    home: {
-      categoryList: {
-        SIDEBAR: {
-          SIDEBAR_NAME: 'Breaking News',
-          SIDEBAR_SLUG: '/category/breaking-news',
-        },
-
-        CATEGORY_A: {
-          CATEGORY_A_NAME: 'Entertainment',
-          CATEGORY_A_SLUG: '/category/entertainment',
-        },
-        CATEGORY_B: {
-          CATEGORY_B_NAME: 'Bollywood',
-          CATEGORY_B_SLUG: '/category/bollywood',
-        },
-        CATEGORY_C: {
-          CATEGORY_C_NAME: 'IPL 2022',
-          CATEGORY_C_SLUG: '/category/ipl-2022',
-        },
-        CATEGORY_D: {
-          CATEGORY_D_NAME: 'Social News',
-          CATEGORY_D_SLUG: '/category/social-news',
-        },
-        CATEGORY_E: {
-          CATEGORY_E_NAME: 'Social News',
-          CATEGORY_D_SLUG: '/category/social-news',
-        },
-        // CATEGORY_B: 'Romance',
-      },
-    },
-
-    image: {
-      LOGO: 'https://newsctrls.com/wp-content/uploads/2022/04/news-ctrls.com-1.png',
-    },
-    color: {
-      PRIMARY_COLOR: '#1e4683',
-    },
-  },
-  images: {
-    domains: [
-      'newsctrls.com',
-      'i0.wp.com',
-      'secure.gravatar.com',
-      'babacricnews.s3.ap-south-1.amazonaws.com',
-    ],
-  },
-});
+module.exports = function(...args) {
+  let original = require('./next.config.original.1655363309913.js');
+  const finalConfig = {};
+  const target = { target: 'serverless' };
+  if (typeof original === 'function' && original.constructor.name === 'AsyncFunction') {
+    // AsyncFunctions will become promises
+    original = original(...args);
+  }
+  if (original instanceof Promise) {
+    // Special case for promises, as it's currently not supported
+    // and will just error later on
+    return original
+      .then((originalConfig) => Object.assign(finalConfig, originalConfig))
+      .then((config) => Object.assign(config, target));
+  } else if (typeof original === 'function') {
+    Object.assign(finalConfig, original(...args));
+  } else if (typeof original === 'object') {
+    Object.assign(finalConfig, original);
+  }
+  Object.assign(finalConfig, target);
+  return finalConfig;
+}

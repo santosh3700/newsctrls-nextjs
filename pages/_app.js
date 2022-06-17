@@ -77,7 +77,7 @@ const MyApp = ({ Component, pageProps }) => {
         crossorigin="anonymous"
       />
 
-      <GoogleAnalytics />
+      {/* <GoogleAnalytics /> */}
 
       <ChakraProvider>
         <ColorModeScript initialColorMode="default"></ColorModeScript>
